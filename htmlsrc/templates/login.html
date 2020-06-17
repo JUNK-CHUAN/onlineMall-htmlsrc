@@ -173,15 +173,15 @@
             $.ajax({
                 url: url,
                 type: 'POST',
-                dataType:'text',
+                dataType:'json',
                 crossOrigin: true,
                 data: info,
                 cache: false,
                 success: function (data) {
                     console.log('success,'+JSON.stringify(data));
-                    var storage = window.localStorage;
-                    storage.setItem('username', 'username');
-                    window.location.href = "./template.html";
+                    if (data.result === 'true') {
+                        window.location.href = "./template.html";
+                    }
                 },
                 error: function (data) {
                     console.log("false");
