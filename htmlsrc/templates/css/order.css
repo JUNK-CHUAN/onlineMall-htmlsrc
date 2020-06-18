@@ -1,3 +1,8 @@
+.media {
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}
 .order-head {
     margin-left: 200px;
     margin-right: 200px;
@@ -16,11 +21,21 @@
 }
 .media-body-left {
     height: 200px;
-    width: 49%;
-    display: inline;
+    width: 400px;
+    position: absolute;
 }
 .media-body-right {
     height: 200px;
-    width: 49%;
-    display: inline;
+    width: 400px;
+    float: right;
+    text-align: right;
+}
+.media-body-right .media-body-right-bottom {
+    padding-top: 100px;
+}
+.media-body h5 {
+    font-size: 24px;
+}
+.media-body span {
+    font-size: 18px;
 }
