@@ -1,0 +1,26 @@
+.order-head {
+    margin-left: 200px;
+    margin-right: 200px;
+    height: 200px;
+    padding-top: 100px;
+}
+.order-head h2 {
+    font-size: 52px;
+}
+.order-list {
+    margin: 10px 200px 200px 200px;
+}
+.spimg {
+    height: 200px;
+    width: 200px;
+}
+.media-body-left {
+    height: 200px;
+    width: 49%;
+    display: inline;
+}
+.media-body-right {
+    height: 200px;
+    width: 49%;
+    display: inline;
+}
