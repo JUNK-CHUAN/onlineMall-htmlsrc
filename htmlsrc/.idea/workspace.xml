@@ -12,6 +12,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -25,10 +26,14 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\phpstudy_pro\WWW\htmlsrc\templates\bootstrap" />
+      <recent name="C:\phpstudy_pro\WWW\htmlsrc\templates\img" />
+      <recent name="C:\phpstudy_pro\WWW\htmlsrc\templates" />
       <recent name="C:\phpstudy_pro\WWW\htmlsrc\static\jquery" />
       <recent name="C:\phpstudy_pro\WWW\htmlsrc\static\js" />
     </key>
@@ -68,7 +73,8 @@
       <workItem from="1592365861866" duration="1407000" />
       <workItem from="1592367304743" duration="29000" />
       <workItem from="1592367416273" duration="17800000" />
-      <workItem from="1592390622454" duration="8607000" />
+      <workItem from="1592390622454" duration="8898000" />
+      <workItem from="1592443816975" duration="1914000" />
     </task>
     <servers />
   </component>
