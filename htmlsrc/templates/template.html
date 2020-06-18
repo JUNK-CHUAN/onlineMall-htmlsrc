@@ -16,7 +16,8 @@
 <body>
 
 <script>
-    $('.logoutBtn').click(function () {
+    function logout() {
+        console.log("click");
         $.ajax({
             url: "http://127.0.0.1:8080/logout",
             type: "GET",
@@ -32,7 +33,7 @@
                 console.log(data)
             }
         })
-    })
+    }
 </script>
 
 <header>
@@ -64,7 +65,7 @@
                         <a class="dropdown-item" href="#">个人中心</a>
                         <a class="dropdown-item" href="order.html">订单信息</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item logoutBtn" href="#">注销</a>
+                        <a class="dropdown-item logoutBtn" onclick="logout()">注销</a>
                     </div>
                 </li>
             </ul>
