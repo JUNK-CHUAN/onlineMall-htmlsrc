@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="Zh_cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>advertise</title>
+    <link href="css/ad.css" rel="stylesheet">
+    <base target="_Blank">
+</head>
+<body>
+
+
+    <div class="tab_contents">
+        <ul class="tab_nav">
+            <li class="tab_nav_active">
+<!--                <img src="img/SharedScreenshot.jpg" alt="">-->
+                <h2>华东</h2>
+            </li>
+            <li>
+                <h2>华南</h2>
+            </li>
+            <li>
+                <h2>华中</h2>
+            </li>
+            <li>
+                <h2>华北</h2>
+            </li>
+            <li>
+                <h2>西北</h2>
+            </li>
+            <li>
+                <h2>西南</h2>
+            </li>
+            <li>
+                <h2>东北</h2>
+            </li>
+            <li>
+                <h2>台港澳</h2>
+            </li>
+        </ul>
+
+        <ul class="tab_box">
+            <li class="tab_box_active">
+                <img src="img/SharedScreenshot.jpg" alt="">
+                <div>
+                    <h2>ad1</h2>
+                </div>
+            </li>
+            <li>
+                <img src="img/SharedScreenshot.jpg" alt="">
+                <div>
+                    <h2>ad2</h2>
+                </div>
+            </li>
+            <li>
+                <img src="img/SharedScreenshot.jpg" alt="">
+                <div>
+                    <h2>ad3</h2>
+                </div>
+            </li>
+            <li>
+                <img src="img/SharedScreenshot.jpg" alt="">
+                <div>
+                    <h2>ad4</h2>
+                </div>
+            </li>
+            <li>
+                <img src="img/SharedScreenshot.jpg" alt="">
+                <div>
+                    <h2>ad5</h2>
+                </div>
+            </li>
+            <li>
+                <img src="img/SharedScreenshot.jpg" alt="">
+                <div>
+                    <h2>ad5</h2>
+                </div>
+            </li>
+            <li>
+                <img src="img/SharedScreenshot.jpg" alt="">
+                <div>
+                    <h2>ad5</h2>
+                </div>
+            </li>
+            <li>
+                <img src="img/SharedScreenshot.jpg" alt="">
+                <div>
+                    <h2>ad5</h2>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+<script>
+/*
+ * 
+ * 循环遍历导航条
+ * 点击导航条切换类名进行显示
+ * 
+ */
+let tabNavItem = document.querySelectorAll(".tab_nav>li");
+let tabBoxItem = document.querySelectorAll(".tab_box>li");
+
+let tabNavActiveItem = document.querySelector(".tab_nav_active");
+let tabBoxActiveItem = document.querySelector(".tab_box_active");
+
+
+tabNavItem.forEach(function (item, index) {
+    item.onmouseenter = function() {
+        tabNavActiveItem.className = "";
+        this.className = "tab_nav_active";
+        tabNavActiveItem = this;
+
+        tabBoxActiveItem.className = "";
+        tabBoxItem[index].className = "tab_box_active";
+        tabBoxActiveItem = tabBoxItem[index];
+    }
+})
+</script>
+
+</body>
+</html>
