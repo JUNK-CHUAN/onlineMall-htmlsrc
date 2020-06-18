@@ -30,6 +30,24 @@
             }
         })
     });
+
+    $('.logoutBtn').click(function () {
+        $.ajax({
+            url: "http://127.0.0.1:8080/logout",
+            type: "GET",
+            dataType: 'json',
+            crossOrigin: true,
+            success: function (data) {
+                console.log(JSON.stringify(data));
+                if (data.result === 'true') {
+                    window.location.href = "./login.html";
+                }
+            },
+            error: function (data) {
+                console.log(data)
+            }
+        })
+    })
 </script>
 
 <header>
@@ -61,7 +79,7 @@
                         <a class="dropdown-item" href="#">个人中心</a>
                         <a class="dropdown-item" href="order.html">订单信息</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">注销</a>
+                        <a class="dropdown-item logoutBtn" href="#">注销</a>
                     </div>
                 </li>
             </ul>
