@@ -49,12 +49,13 @@
                                 '<div class="media-body">\n' +
                                 '<div class="media-body-left">\n' +
                                 '<h5 class="mt-0 mb-1">' + orderItem['spName'] + '</h5>\n' +
-                                '<span>' + orderItem['sName'] + '</span><br>\n' +
-                                '<span>' + orderItem['sPhone'] + '</span><br>\n' +
-                                '<span>' + orderItem['submitTime'] + '</span><br>\n' +
+                                '<span>商家：' + orderItem['sName'] + '</span><br>\n' +
+                                '<span>商家联系方式：' + orderItem['sPhone'] + '</span><br>\n' +
+                                '<span>下单时间：' + orderItem['submitTime'].slice(0,10) + '</span><br>\n' +
+                                '<span>收货地址：' + orderItem['recvAddress'] + '</span><br>\n' +
                                 '</div>\n' +
                                 '<div class="media-body-right">\n' +
-                                '<h5  class="mt-0 mb-1">' + orderItem['sum'] + '</h5>\n' +
+                                '<h5  class="mt-0 mb-1">金额：' + orderItem['sum'] + '</h5>\n' +
                                 '<span>x ' + orderItem['count'] + '</span>\n' +
                                 '<div class="media-body-right-bottom">\n' +
                                 '<h5 class="mt-0 mb-1">' + orderItem['state'] + '</h5>\n' +
