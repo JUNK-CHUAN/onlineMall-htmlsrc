@@ -32,10 +32,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\phpstudy_pro\WWW\htmlsrc\templates\img" />
+      <recent name="C:\phpstudy_pro\WWW\htmlsrc\templates\css" />
       <recent name="C:\phpstudy_pro\WWW\htmlsrc\templates" />
       <recent name="C:\phpstudy_pro\WWW\htmlsrc\templates\jquery" />
       <recent name="C:\phpstudy_pro\WWW\htmlsrc\templates\bootstrap" />
-      <recent name="C:\phpstudy_pro\WWW\htmlsrc\static\jquery" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -77,7 +77,8 @@
       <workItem from="1592443816975" duration="12617000" />
       <workItem from="1592461326112" duration="9107000" />
       <workItem from="1592481756423" duration="1867000" />
-      <workItem from="1592534424368" duration="7567000" />
+      <workItem from="1592534424368" duration="8362000" />
+      <workItem from="1592616850645" duration="2770000" />
     </task>
     <servers />
   </component>
