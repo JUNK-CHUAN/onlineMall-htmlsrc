@@ -19,9 +19,9 @@
 
 <script>
     function search() {
-        var storage = window.localStorage;
+        let storage = window.localStorage;
         storage.setItem("urlpattern", "/search");
-        var keyword = $("input[type='search']").val();
+        let keyword = $("input[type='search']").val();
         storage.setItem("keyword", "/"+keyword);
         window.location.href = "./goodList.html";
     }

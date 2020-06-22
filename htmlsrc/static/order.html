@@ -39,10 +39,10 @@
                     success: function (resData) {
                         console.log(JSON.stringify(resData));
 
-                        var orderList = resData["data"];
-                        var listFrame = $(".order-list > ul");
-                        for (var i = 0; i < orderList.length; i++) {
-                            var orderItem = orderList[i];
+                        let orderList = resData["data"];
+                        let listFrame = $(".order-list > ul");
+                        for (let i = 0; i < orderList.length; i++) {
+                            let orderItem = orderList[i];
                             let itemWritable = $(
                                 '<li class="media my-1">\n' +
                                 '<img src=' + orderItem['picUrl'] + ' class="mr-3 spimg" alt="">\n' +
@@ -92,9 +92,9 @@
     }
 
     function search() {
-        var storage = window.localStorage;
+        let storage = window.localStorage;
         storage.setItem("urlpattern", "/search");
-        var keyword = $("input[type='search']").val();
+        let keyword = $("input[type='search']").val();
         storage.setItem("keyword", "/"+keyword);
         window.location.href = "./goodList.html";
     }

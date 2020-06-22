@@ -55,50 +55,50 @@
                             if (data["result"] === "true")
                             {
                                 console.log("get data success");
-                                var jsonData = data["data"];
-                                for (var key in jsonData) {
-                                    var dataList = jsonData[key];
+                                let jsonData = data["data"];
+                                for (let key in jsonData) {
+                                    let dataList = jsonData[key];
                                     console.log(dataList);
                                     if (key === "西南"){
-                                        for (var i = 0; i < dataList.length; i++) {
-                                            var item = dataList[i];
-                                            var detail_class = "#xinan-detail-" + (i+1);
+                                        for (let i = 0; i < dataList.length; i++) {
+                                            let item = dataList[i];
+                                            let detail_class = "#xinan-detail-" + (i+1);
                                             $(detail_class+" img").attr('src', item["picUrl"]);
                                             $(detail_class+" h5").text(item["name"]);
                                             $(detail_class+" p").text(item["detail"]);
                                         }
                                     }
                                     if (key === "华南") {
-                                        for (var i = 0; i < dataList.length; i++) {
-                                            var item = dataList[i];
-                                            var detail_class = "#huanan-detail-" + (i+1);
+                                        for (let i = 0; i < dataList.length; i++) {
+                                            let item = dataList[i];
+                                            let detail_class = "#huanan-detail-" + (i+1);
                                             $(detail_class+" img").attr('src', item["picUrl"]);
                                             $(detail_class+" h5").text(item["name"]);
                                             $(detail_class+" p").text(item["detail"]);
                                         }
                                     }
                                     if (key === "华东") {
-                                        for (var i = 0; i < dataList.length; i++) {
-                                            var item = dataList[i];
-                                            var detail_class = "#huadong-detail-" + (i+1);
+                                        for (let i = 0; i < dataList.length; i++) {
+                                            let item = dataList[i];
+                                            let detail_class = "#huadong-detail-" + (i+1);
                                             $(detail_class+" img").attr('src', item["picUrl"]);
                                             $(detail_class+" h5").text(item["name"]);
                                             $(detail_class+" p").text(item["detail"]);
                                         }
                                     }
                                     if (key === "东北") {
-                                        for (var i = 0; i < dataList.length; i++) {
-                                            var item = dataList[i];
-                                            var detail_class = "#dongbei-detail-" + (i+1);
+                                        for (let i = 0; i < dataList.length; i++) {
+                                            let item = dataList[i];
+                                            let detail_class = "#dongbei-detail-" + (i+1);
                                             $(detail_class+" img").attr('src', item["picUrl"]);
                                             $(detail_class+" h5").text(item["name"]);
                                             $(detail_class+" p").text(item["detail"]);
                                         }
                                     }
                                     if (key === "中原") {
-                                        for (var i = 0; i < dataList.length; i++) {
-                                            var item = dataList[i];
-                                            var detail_class = "#zhongyuan-detail-" + (i+1);
+                                        for (let i = 0; i < dataList.length; i++) {
+                                            let item = dataList[i];
+                                            let detail_class = "#zhongyuan-detail-" + (i+1);
                                             $(detail_class+" img").attr('src', item["picUrl"]);
                                             $(detail_class+" h5").text(item["name"]);
                                             $(detail_class+" p").text(item["detail"]);
