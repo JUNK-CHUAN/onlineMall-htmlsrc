@@ -18,7 +18,6 @@
 
 <script>
     $(document).ready(function () {
-        $('#input-address').attr("value", "data.address");
         $.ajax({
             url : "http://127.0.0.1:8080/getCurrentUserInfo",
             type : 'GET',
@@ -30,7 +29,7 @@
                     window.location.href = "./login.html";
                 }
                 else {
-                    // $('#input-address').attr("value", "data.address");
+                    $('#input-address').attr("value", data.address);
                     $.ajax({
                         url: "http://127.0.0.1:8080/selectCustomerCart",
                         type: "GET",
@@ -52,7 +51,7 @@
                                     '            <div class="input-group">\n' +
                                     '                <div class="input-group-prepend">\n' +
                                     '                    <div class="input-group-text">\n' +
-                                    '                        <input type="checkbox" aria-label="Checkbox for following text input" id=' + cartItem["spID"].toString() + 'onchange="getsum()">\n' +
+                                    '                        <input type="checkbox" aria-label="Checkbox for following text input" id=' + cartItem["spID"].toString() + ' onchange="getsum()">\n' +
                                     '                    </div>\n' +
                                     '                </div>\n' +
                                     '                <img src=' + cartItem["picUrl"] + ' class="mr-3 spimg" alt="">\n' +
@@ -118,7 +117,7 @@
             // console.log(superCheckNode);
             if (superCheckNode.checked) {
                 let money = chargeList[i].parentElement.previousElementSibling.firstElementChild.textContent;
-                sum = sum + parseInt(chargeList[i].value) * parseInt(money);
+                sum = sum + parseInt(chargeList[i].value) * parseFloat(money);
             }
         }
         $('.sum-charge').text(sum);
@@ -160,7 +159,7 @@
             url: "http://127.0.0.1:8080/buyFromCartWithNewCount",
             type: 'POST',
             dataType: 'json',
-            data: resData,
+            data: JSON.stringify(resData),
             crossOrigin: true,
             success: function (data) {
                 if (data.result === "true") {
