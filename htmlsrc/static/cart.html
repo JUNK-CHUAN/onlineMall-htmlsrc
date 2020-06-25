@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>主页静态样例</title>
+    <title>我的购物车</title>
     <meta charset="UTF-8">
     <link rel="shortcut icon"type="image/x-icon" href="./img/logo.ico"media="screen" />
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -120,7 +120,7 @@
                 sum = sum + parseInt(chargeList[i].value) * parseFloat(money);
             }
         }
-        $('.sum-charge').text(sum);
+        $('.sum-charge').text(sum.toFixed(2));
     }
 
     function delItem() {
@@ -129,11 +129,34 @@
         let item = 0;
         for (let i=0; i<itemList.length; i++) {
             if (itemList[i].checked) {
-                itemIdList[item] = itemList[i].id;
+                itemIdList[item] = parseInt(itemList[i].id);
                 item++;
             }
         }
-        console.log(itemIdList)
+        let delList = {
+            "spList": itemIdList
+        }
+        console.log(JSON.stringify(delList))
+        $.ajax({
+            url: "http://127.0.0.1:8080/deleteCart",
+            type: "POST",
+            contentType: "application/text; charset=UTF-8",
+            dataType: "json",
+            data: JSON.stringify(delList),
+            crossOrigin: true,
+            success: function (resData) {
+                if (resData.result === "true") {
+                    location.reload();
+                }
+                else {
+                    alert("please login!");
+                    location.reload();
+                }
+            },
+            error: function (data) {
+                alert("connection error!")
+            }
+        })
     }
 
     function submit() {
@@ -155,15 +178,17 @@
             "data": itemResList,
             "recvAddress": $('#input-address').val()
         };
+        console.log(JSON.stringify(resData));
         $.ajax({
             url: "http://127.0.0.1:8080/buyFromCartWithNewCount",
             type: 'POST',
             dataType: 'json',
+            contentType: "application/text; charset=UTF-8",
             data: JSON.stringify(resData),
             crossOrigin: true,
             success: function (data) {
                 if (data.result === "true") {
-                    location.reload();
+                    window.location.href = "./order.html";
                 }
                 else {
                     alert(data.reason);
@@ -202,7 +227,7 @@
                         我的
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">个人中心</a>
+                        <a class="dropdown-item" href="currinfo.html">个人中心</a>
                         <a class="dropdown-item" href="order.html">订单信息</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item logoutBtn" onclick="logout()">注销</a>
